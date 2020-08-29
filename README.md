@@ -1,4 +1,4 @@
-# _Tab Gallery_
+# _Collapse Tab Menu_
 
 #### _Version 1_
 #### _Date 08/26/2020_
