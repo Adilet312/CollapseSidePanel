@@ -1,25 +1,18 @@
 import './css/styles.css';
 
-let obj = {showMenu:true}
-function showMenu(check){
 
-  let menu = document.querySelector('.smallPanel ul');
-
-  check===true ? menu.style.visibility="visible" : menu.style.visibility="hidden";
+function showMenu(){
+  let ul = document.querySelector('.nav-center ul');
+  let class_name = ul.getAttribute('class');
+  if(class_name==="links"){
+    ul.className = "show-links";
+  }
+  else if(class_name==="show-links"){
+    ul.className = "links";
+  }
 }
 
-let openBtn = document.querySelector('.menu-icon');
-openBtn.addEventListener('click',function(){
-  if(obj.showMenu){
-    showMenu(obj.showMenu);
-    obj.showMenu = false;
-  }
-  else{
-    showMenu(obj.showMenu);
-    obj.showMenu = true;
-  }
-
-},false)
+document.querySelector('.nav-toggle').addEventListener('click',showMenu,false);
 
 
 
