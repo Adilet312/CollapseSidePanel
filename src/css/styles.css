@@ -23,6 +23,7 @@ body{
     }
   .show-links{
     height: 20em;
+    width: 10em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -30,6 +31,8 @@ body{
     list-style: none;
     color: white;
     background: black;
+    position: relative;
+    top:90px;
   }
   .nav-toggle{
     position: absolute;
@@ -45,13 +48,16 @@ body{
 }
 @media only screen and (min-width:1000px){
   .show-links{
+    position: absolute;
+    top:0px;
+    right: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     list-style: none;
     width:100%;
-    height:100px;
+    height: -webkit-fill-available;
     color: white;
     background: black;
   }
